@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_comments",
+  "info": {
+    "singularName": "project-comment",
+    "pluralName": "project-comments",
+    "displayName": "ProjectComment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subject": {
+      "type": "text"
+    },
+    "content": {
+      "type": "text"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
